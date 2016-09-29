@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>demo2</title>
+	<style>
+	/*ctrl+shift+p调出插件*/
+	/*ctrl+, 调出设置选项板*/
+		div{
+			color: rgb(105, 45, 168);//ctrl+alt+c 调出调色板
+		}
+	</style>
+	<script type="text/javascript" src="../build/react.js"></script>
+	<script type="text/javascript" src="../build/react-dom.js"></script>
+	<script type="text/javascript"src="../build/browser.min.js"></script>
+</head>
+
+<body>
+	<div id="example"></div>
+	<script type="text/babel">
+		var names=["Alice","Doge","Olive"];
+		ReactDOM.render(
+			<div>
+				{ names.map(function(name) {
+					 return	<div>hello,{name}!</div>
+				}
+			) }</div>,
+			 document.getElementById("example")
+		);
+	</script>
+</body>
+
+</html>

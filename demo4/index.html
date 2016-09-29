@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo4</title>
+	<script type="text/javascript" src="../build/react.js"></script>
+	<script type="text/javascript" src="../build/react-dom.js"></script>
+	<script type="text/javascript"src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="test"></div>
+	<!-- 添加组件属性，有一个地方需要注意，就是 class 属性需要写成 className ，for 属性需要写成 htmlFor ，这是因为 class 和 for 是 JavaScript 的保留字。 -->
+	<script type="text/babel">
+		var HelloMessage=React.createClass({
+			render:function(){
+				return <h1>hello {this.props.name}</h1>;//通过props获取属性
+			}
+		});
+		ReactDOM.render(
+			<HelloMessage name="John"/>,
+			document.getElementById("test")
+		)
+	</script>
+</body>
+</html>
